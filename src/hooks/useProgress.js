@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 
-const STORAGE_KEY = 'pharmly_v1'
+const STORAGE_KEY = 'ptcbstudy_v1'
 
 const defaultState = {
   ratings: {},      // drugId -> 'again' | 'hard' | 'good' | 'easy'

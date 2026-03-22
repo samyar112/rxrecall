@@ -1,4 +1,4 @@
-# Pharmly — PTCB Top 200 Drug Study App
+# PTCBstudy — PTCB Top 200 Drug Study App
 
 Professional flashcard study tool for the PTCB pharmacy tech exam.
 

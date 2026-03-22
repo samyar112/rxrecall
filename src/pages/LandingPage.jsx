@@ -43,7 +43,7 @@ const STATS = [
 
 // const TESTIMONIALS = [
 //   {
-//     quote: 'I failed the PTCB twice before finding Pharmly. Passed on my third attempt after two weeks of daily study.',
+//     quote: 'I failed the PTCB twice before finding PTCBstudy. Passed on my third attempt after two weeks of daily study.',
 //     name: 'Jessica M.',
 //     role: 'Certified Pharmacy Technician',
 //   },
@@ -70,7 +70,7 @@ const FAQS = [
   },
   {
     q: 'How is this different from Quizlet?',
-    a: 'Pharmly is built specifically for PTCB. Every card includes drug class, indication, pronunciation, controlled substance schedule, and brand discontinuation notes — none of which Quizlet provides out of the box.',
+    a: 'PTCBstudy is built specifically for PTCB. Every card includes drug class, indication, pronunciation, controlled substance schedule, and brand discontinuation notes — none of which Quizlet provides out of the box.',
   },
   {
     q: 'When is the full version available?',
@@ -85,7 +85,8 @@ export default function LandingPage({ onStart }) {
       {/* NAV */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <span className={styles.pharmly}>Pharmly</span>
+            <span className={styles.ptchstudy}>PTCB</span>
+            <span className={styles.study}>study</span>
         </div>
         <div className={styles.navLinks}>
           <a href="#features" className={styles.navLink}>Features</a>
@@ -317,7 +318,7 @@ export default function LandingPage({ onStart }) {
               <em>Are you ready?</em>
             </h2>
             <p className={styles.bottomCtaSub}>
-              Join many pharmacy tech students studying smarter with Pharmly.
+              Join many pharmacy tech students studying smarter with PTCBstudy.
             </p>
             <button className={styles.ctaPrimary} onClick={onStart}>
               Start Studying Free →
@@ -330,14 +331,14 @@ export default function LandingPage({ onStart }) {
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <div className={styles.footerLogo}>
-            <span className={styles.pharmly}>Pharmly</span>
+            <span className={styles.ptcbstudy}>PTCBstudy</span>
        
             
           </div>
           <p className={styles.footerNote}>
             Built for PTCB candidates · Top 200 Drugs · 2026 Exam Blueprint
           </p>
-          <p className={styles.footerCopy}>© 2026 Pharmly. All rights reserved.</p>
+          <p className={styles.footerCopy}>© 2026 PTCBstudy. All rights reserved.</p>
         </div>
       </footer>
 
