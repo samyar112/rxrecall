@@ -41,23 +41,23 @@ const STATS = [
   { value: '95%', label: 'Pass rate goal' },
 ]
 
-const TESTIMONIALS = [
-  {
-    quote: 'I failed the PTCB twice before finding RxRecall. Passed on my third attempt after two weeks of daily study.',
-    name: 'Jessica M.',
-    role: 'Certified Pharmacy Technician',
-  },
-  {
-    quote: 'The pronunciation feature alone is worth it. I finally stopped second-guessing myself when pulling medications.',
-    name: 'Marcus T.',
-    role: 'Pharmacy Tech Student',
-  },
-  {
-    quote: 'Clean, fast, and actually fun to use. Nothing else I tried came close.',
-    name: 'Aisha K.',
-    role: 'PTCB Candidate',
-  },
-]
+// const TESTIMONIALS = [
+//   {
+//     quote: 'I failed the PTCB twice before finding Pharmly. Passed on my third attempt after two weeks of daily study.',
+//     name: 'Jessica M.',
+//     role: 'Certified Pharmacy Technician',
+//   },
+//   {
+//     quote: 'The pronunciation feature alone is worth it. I finally stopped second-guessing myself when pulling medications.',
+//     name: 'Marcus T.',
+//     role: 'Pharmacy Tech Student',
+//   },
+//   {
+//     quote: 'Clean, fast, and actually fun to use. Nothing else I tried came close.',
+//     name: 'Aisha K.',
+//     role: 'PTCB Candidate',
+//   },
+// ]
 
 const FAQS = [
   {
@@ -70,7 +70,7 @@ const FAQS = [
   },
   {
     q: 'How is this different from Quizlet?',
-    a: 'RxRecall is built specifically for PTCB. Every card includes drug class, indication, pronunciation, controlled substance schedule, and brand discontinuation notes — none of which Quizlet provides out of the box.',
+    a: 'Pharmly is built specifically for PTCB. Every card includes drug class, indication, pronunciation, controlled substance schedule, and brand discontinuation notes — none of which Quizlet provides out of the box.',
   },
   {
     q: 'When is the full version available?',
@@ -85,8 +85,7 @@ export default function LandingPage({ onStart }) {
       {/* NAV */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <span className={styles.rx}>Rx</span>
-          <span className={styles.recall}>Recall</span>
+          <span className={styles.pharmly}>Pharmly</span>
         </div>
         <div className={styles.navLinks}>
           <a href="#features" className={styles.navLink}>Features</a>
@@ -200,7 +199,7 @@ export default function LandingPage({ onStart }) {
         </div>
       </section>
 
-      {/* SOCIAL PROOF */}
+      {/* SOCIAL PROOF
       <section className={styles.testimonials}>
         <div className={styles.sectionInner}>
           <p className={styles.sectionEyebrow}>Real results</p>
@@ -224,7 +223,7 @@ export default function LandingPage({ onStart }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* PRICING */}
       <section className={styles.pricing} id="pricing">
@@ -318,7 +317,7 @@ export default function LandingPage({ onStart }) {
               <em>Are you ready?</em>
             </h2>
             <p className={styles.bottomCtaSub}>
-              Join thousands of pharmacy tech students studying smarter with RxRecall.
+              Join many pharmacy tech students studying smarter with Pharmly.
             </p>
             <button className={styles.ctaPrimary} onClick={onStart}>
               Start Studying Free →
@@ -331,13 +330,14 @@ export default function LandingPage({ onStart }) {
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <div className={styles.footerLogo}>
-            <span className={styles.rx}>Rx</span>
-            <span className={styles.recall}>Recall</span>
+            <span className={styles.pharmly}>Pharmly</span>
+       
+            
           </div>
           <p className={styles.footerNote}>
             Built for PTCB candidates · Top 200 Drugs · 2026 Exam Blueprint
           </p>
-          <p className={styles.footerCopy}>© 2026 RxRecall. All rights reserved.</p>
+          <p className={styles.footerCopy}>© 2026 Pharmly. All rights reserved.</p>
         </div>
       </footer>
 

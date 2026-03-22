@@ -26,12 +26,8 @@
   line-height: 1;
 }
 
-.rx {
-  color: var(--purple);
-  font-style: italic;
-}
 
-.recall {
+.pharmly {
   color: var(--accent);
 }
 

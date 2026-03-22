@@ -5,8 +5,7 @@ export default function Topbar({ mastered, studied, streak, page, setPage }) {
     <header className={styles.topbar}>
       <div className={styles.left}>
         <div className={styles.wordmark} onClick={() => setPage('landing')}>
-          <span className={styles.rx}>Rx</span>
-          <span className={styles.recall}>Recall</span>
+          <span className={styles.pharmly}>Pharmly</span>
         </div>
         <div className={styles.badge}>PTCB 2026</div>
       </div>
