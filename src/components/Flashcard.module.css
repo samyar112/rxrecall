@@ -1,0 +1,409 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─── SCENE & FLIP ─────────────────────────── */
+.scene {
+  width: 100%;
+  height: 380px;
+  perspective: 1400px;
+  cursor: pointer;
+  outline: none;
+}
+
+.scene:focus-visible .cardInner {
+  box-shadow: 0 0 0 2px var(--accent), var(--shadow-lg);
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.cardFace:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+/* ─── CARD TOP ─────────────────────────────── */
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chipControlled {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--red-light);
+  color: var(--red);
+  border: 1px solid rgba(192,57,43,0.15);
+}
+
+.chipDiscontinued {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--amber-light);
+  color: var(--amber);
+  border: 1px solid rgba(183,121,31,0.15);
+}
+
+.cardNum {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* ─── CARD CENTER ──────────────────────────── */
+.cardCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 16px 0;
+}
+
+.cardSideLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.drugName {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.drugNameAccent {
+  color: var(--accent);
+}
+
+.pronunciation {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+/* Info grid on back */
+.infoGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  text-align: left;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 16px;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.infoKey {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.infoVal {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.infoNote {
+  color: var(--amber);
+  font-size: 12px;
+}
+
+/* ─── CARD BOTTOM ──────────────────────────── */
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.speakBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.speakBtn:hover {
+  color: var(--purple);
+  border-color: rgba(124,58,237,0.3);
+  background: var(--purple-light);
+}
+
+.speakActive {
+  color: var(--purple);
+  border-color: rgba(124,58,237,0.3);
+  background: var(--purple-light);
+}
+.flipHint {
+  font-size: 12px;
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+/* ─── RATING ROW ───────────────────────────── */
+.ratingRow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ratingLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.ratingBtns {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.ratingBtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.ratingBtnLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ratingBtnSub {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.ratingKbd {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-faint);
+}
+
+.rating_red .ratingBtnLabel { color: var(--red); }
+.rating_red:hover { background: var(--purple-light); border-color: rgba(124,58,237,0.3); }
+
+.rating_amber .ratingBtnLabel { color: var(--amber); }
+.rating_amber:hover { background: var(--purple-light); border-color: rgba(124,58,237,0.3); }
+
+.rating_blue .ratingBtnLabel { color: var(--blue); }
+.rating_blue:hover { background: var(--purple-light); border-color: rgba(124,58,237,0.3); }
+
+.rating_green .ratingBtnLabel { color: var(--green); }
+.rating_green:hover { background: var(--purple-light); border-color: rgba(124,58,237,0.3); }
+
+/* ─── NAV ROW ──────────────────────────────── */
+.navRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.navBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.navBtn:hover:not(:disabled) {
+  border-color: var(--purple);
+  color: var(--purple);
+  background: var(--purple-light);
+}
+
+.navBtn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.progressDots {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width 0.35s ease;
+}
+
+.progressText {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+/* ─── RESPONSIVE ───────────────────────────── */
+@media (max-width: 600px) {
+  .scene { height: 320px; }
+  .cardFace { padding: 20px 22px; }
+  .drugName { font-size: 34px; }
+  .ratingBtns { gap: 6px; }
+  .ratingBtn { padding: 10px 4px; }
+  .ratingBtnSub { display: none; }
+  .ratingKbd { display: none; }
+}
+
+.nextWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.rateHint {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
